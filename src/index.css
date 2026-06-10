@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  font-family: "Manrope", sans-serif;
+}
+
+.btn-primary {
+  @apply bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold transition;
+}
+
+.btn-primary:hover {
+  @apply bg-blue-700;
+}
+
+.btn-secondary {
+  @apply border border-gray-300 px-6 py-3 rounded-xl font-semibold transition;
+}
+
+.btn-secondary:hover {
+  @apply bg-gray-100;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Inter, sans-serif;
+  background: white;
+  color: #111827;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 25s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
